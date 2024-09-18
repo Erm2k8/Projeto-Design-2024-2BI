@@ -1,2 +1,11 @@
-@import url('./_reset.css');
-@import url('./_typography.css');
+@import url('_reset.css');
+@import url('_typography.css');
+@import url('_header.css');
+
+.thin-border {
+    border: 1px solid #BBD6EE;
+}
+
+.thin-border-bottom {
+    box-shadow: 0 0 0 0.5px #f0f8ff80;
+}
