@@ -13,7 +13,7 @@ export default class loadHeader {
                 <a href="index.html"><img src="${logoPath}" alt="Logo" class="logo"></a>
             </div>
             <div class="search-container">
-                <input type="text" id="search" placeholder="Buscar...">
+                <input type="text" id="search" placeholder="Pesquise algo...">
                 <img src="/assets/images/svgs/search.svg" alt="Search" class="search-icon">
             </div>
             <div class="dropdown">
