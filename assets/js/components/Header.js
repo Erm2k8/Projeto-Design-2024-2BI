@@ -1,12 +1,14 @@
-export default class loadHeader {
+export default class Header {
     constructor() {
         this.container = document.getElementById('header');
     }
 
     createHeader() {
-        const logoPath = '/assets/images/svgs/logo.svg';
-        const profilePicPlaceholder = '/assets/images/svgs/profile-pic.svg';  
-        const arrowDown = '/assets/images/svgs/arrow-down.svg';
+        const logoPath = '/assets/images/header/logo.svg';
+        const profilePicPlaceholder = '/assets/images/header/profile-pic.svg';  
+        const arrowDown = '/assets/images/header/arrow-down.svg';
+        const notifyIcon = '/assets/images/header/notify.svg';
+        const searchIcon = '/assets/images/header/search.svg'
 
         const headerHTML = `
             <div class="logo-container">
@@ -14,17 +16,20 @@ export default class loadHeader {
             </div>
             <div class="search-container">
                 <input type="text" id="search" placeholder="Pesquise algo...">
-                <img src="/assets/images/svgs/search.svg" alt="Search" class="search-icon">
+                <img src="${searchIcon}" alt="Search" class="search-icon">
             </div>
-            <div class="dropdown">
-                <button class="dropdown-button thin-border flex-row-center-around">
-                    <img src="${profilePicPlaceholder}" alt="Profile Pic" class="profile-pic">
-                    <img src="${arrowDown}" alt="Arrow Down" class="arrow-down">
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">Trocar Conta</a>
-                    <a href="#">Editar Perfil</a>
-                    <a id="logout-button" href="#">Sair</a>
+            <div class="profile-container">
+                <img src="${notifyIcon}" alt="Profile Pic" class="notify-icon">
+                <div class="dropdown">
+                    <button class="dropdown-button thin-border flex-row-center-around">
+                        <img src="${profilePicPlaceholder}" alt="Profile Pic" class="profile-pic">
+                        <img src="${arrowDown}" alt="Arrow Down" class="arrow-down">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Trocar Conta</a>
+                        <a href="#">Editar Perfil</a>
+                        <a id="logout-button" href="#">Sair</a>
+                    </div>
                 </div>
             </div>
         `;

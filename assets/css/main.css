@@ -1,11 +1,16 @@
 @import url('./_reset.css');
 @import url('./_typography.css');
 @import url('./_header.css');
+@import url('./_lateral-menu.css');
+
+.fixed {
+    position: fixed;
+}
 
 .thin-border {
     border: 1px solid #BBD6EE;
 }
 
 .thin-border-bottom {
-    box-shadow: 0 0 0 0.5px #f0f8ff80;
+    border-bottom: 1px solid rgba(186, 213, 238, 0.5);
 }
