@@ -1,16 +1,17 @@
-@import url('./_reset.css');
-@import url('./_typography.css');
-@import url('./_header.css');
-@import url('./_lateral-menu.css');
+@import url("./_reset.css");
+@import url("./_typography.css");
+@import url("./_header.css");
+@import url("./_lateral-menu.css");
+@import url("./_feed.css");
 
 .fixed {
-    position: fixed;
+	position: fixed;
 }
 
 .thin-border {
-    border: 1px solid #BBD6EE;
+	border: 1px solid #bbd6ee;
 }
 
 .thin-border-bottom {
-    border-bottom: 1px solid rgba(186, 213, 238, 0.5);
+	border-bottom: 1px solid rgba(186, 213, 238, 0.5);
 }

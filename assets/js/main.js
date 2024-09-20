@@ -1,5 +1,6 @@
 import Header from './components/Header.js';
 import LateralMenu from './components/LateralMenu.js';
+import Post from './components/Post.js';
 
 function loadFavicon() {
     const link = document.createElement('link');
@@ -19,8 +20,19 @@ function loadLateralMenu() {
     lateralMenu.createLateralMenu();
 }
 
+function loadPosts() {
+    const post = new Post();
+    post.createPosts();
+    post.createPost();
+    post.createPost();
+    post.createPost();
+    post.createPost();
+    post.createPost();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     loadFavicon();
     loadHeader();
     loadLateralMenu();
+    loadPosts();
 });
