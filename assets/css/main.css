@@ -4,8 +4,13 @@
 @import url("./_lateral-menu.css");
 @import url("./_feed.css");
 
-.fixed {
-	position: fixed;
+#main {
+	position: sticky;
+}
+
+.sticky {
+	position: sticky;
+	top: 0;
 }
 
 .thin-border {

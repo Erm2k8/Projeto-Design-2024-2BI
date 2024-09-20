@@ -3,6 +3,7 @@ main {
 	height: calc(100vh - 5em);
 	left: 16vw;
 	width: calc(100% - 2 * 16vw);
+	height: 100%;
 }
 
 #feed {
@@ -12,6 +13,7 @@ main {
 	background-color: #2c2b3e;
 	border-radius: 40px 40px 0 0;
 	padding: 1em 2em;
+	/* transform: translateX(20vw); */
 }
 
 #filter {
@@ -33,6 +35,8 @@ main {
 		color: #1f1e33;
 	}
 }
+
+/* ---------------- POSTS ---------------- */
 
 #posts {
 	display: flex;
@@ -73,7 +77,7 @@ main {
 		}
 
 		.user-at {
-			font-size: 0.7em;
+			font-size: 0.8em;
 			color: #2d2b4b;
 		}
 	}
@@ -81,7 +85,7 @@ main {
 	.options {
 		margin-left: auto;
 		margin-right: 0.5em;
-		width: 2em;
+		width: 2em;	
 
 		a {
 			display: inline-block;
@@ -97,6 +101,7 @@ main {
 	p {
 		border-left: 4px solid #bbd6ee;
 		padding-left: 0.5em;
+		font-size: 1em;
 	}
 }
 
@@ -108,9 +113,20 @@ main {
 	.icons {
 		display: flex;
 		gap: 1em;
+		cursor: pointer;
+	}
+
+	.icons img {
+		transition-duration: 0.2s;
+	}
+
+	.icons img:hover {
+		transition-duration: 0.2s;
+		transform: translateY(-3px);
 	}
 
 	.datetime {
+		font-size: 0.9em;
 		color: #737373;
 	}
 }
