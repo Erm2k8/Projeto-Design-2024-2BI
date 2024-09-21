@@ -1,6 +1,6 @@
 export default class Post {
 	constructor() {
-		this.container = document.getElementById("main");
+		this.container = document.getElementById("main-posts");
 		this.posts = document.getElementById("posts");
 	}
 
@@ -13,13 +13,20 @@ export default class Post {
                 </div>
                 <div id="posts">
                 </div>
+                <p id="creditos">Desenvolvido por Danilo e Ermesson.</p>
             </div>
         `;
 
 		this.container.innerHTML = postsHTML;
 	}
 
-	createPost() {
+	createPost(
+		dateAndTime = "12h34 • 09 Jan 2024",
+		name = "",
+		username = "",
+		text = "",
+		imagePath = null
+	) {
 		this.posts = document.getElementById("posts");
 
 		const profilePicPath = "/assets/images/feed/profile-pic.svg";
@@ -38,22 +45,29 @@ export default class Post {
                         />
                     </div>
                     <div class="profile-links">
-                        <p class="username"><a href="#">John Doe</a></p>
-                        <p class="user-at"><a href="#">@john_doe</a></p>
+                        <p class="username"><a href="#">${name}</a></p>
+                        <p class="user-at"><a href="#">${username}</a></p>
                     </div>
                     <div class="options">
-                        <a href="#"
-                            ><img
+                        <a href="#">
+                            <img
                                 src="${optionsDotsPath}"
                                 alt="Options"
-                        /></a>
+                            /></a>
                     </div>
                 </div>
                 <div class="post-body">
                     <p>
-                        Hoje eu consegui meu primeiro emprego, estou tão
-                        feliz!
+                        ${text}
                     </p>
+                    ${
+						imagePath
+							? '<div class="post-image"><img src="' +
+							  imagePath +
+							  '" alt="Post Image" /></div>'
+							: ""
+					}
+
                 </div>
                 <div class="post-footer">
                     <div class="icons">
@@ -70,7 +84,7 @@ export default class Post {
                             alt="Share"
                         />
                     </div>
-                    <div class="datetime">12h34 • 09 Jan 2024</div>
+                    <div class="datetime">${dateAndTime}</div>
                 </div>
             </div>
         `;
