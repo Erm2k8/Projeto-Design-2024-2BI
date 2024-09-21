@@ -1,16 +1,16 @@
 export default class Header {
-    constructor() {
-        this.container = document.getElementById('header');
-    }
+	constructor() {
+		this.container = document.getElementById("header");
+	}
 
-    createHeader() {
-        const logoPath = '/assets/images/header/logo.svg';
-        const profilePicPlaceholder = '/assets/images/header/profile-pic.svg';  
-        const arrowDown = '/assets/images/header/arrow-down.svg';
-        const notifyIcon = '/assets/images/header/notify.svg';
-        const searchIcon = '/assets/images/header/search.svg'
+	createHeader() {
+		const logoPath = "/assets/images/header/logo.svg";
+		const profilePicPlaceholder = "/assets/images/header/profile-pic.svg";
+		const arrowDown = "/assets/images/header/arrow-down.svg";
+		const notifyIcon = "/assets/images/header/notify.svg";
+		const searchIcon = "/assets/images/header/search.svg";
 
-        const headerHTML = `
+		const headerHTML = `
             <div class="logo-container">
                 <a href="index.html"><img src="${logoPath}" alt="Logo" class="logo"></a>
             </div>
@@ -34,30 +34,33 @@ export default class Header {
             </div>
         `;
 
-        this.container.innerHTML = headerHTML;
-        this.initDropdown();
-    }
+		this.container.innerHTML = headerHTML;
+		this.initDropdown();
+	}
 
-    initDropdown() {
-        const button = this.container.querySelector('.dropdown-button');
-        const content = this.container.querySelector('.dropdown-content');
+	initDropdown() {
+		const button = this.container.querySelector(".dropdown-button");
+		const content = this.container.querySelector(".dropdown-content");
 
-        button.addEventListener('click', () => {
-            content.classList.toggle('show');
-            
-            const arrowImage = this.container.querySelector('.arrow-down');
+		button.addEventListener("click", () => {
+			content.classList.toggle("show");
 
-            if (content.classList.contains('show')) {
-                arrowImage.style.transform = 'rotate(180deg)';
-            } else {
-                arrowImage.style.transform = 'rotate(0deg)';
-            }
-        });
+			const arrowImage = this.container.querySelector(".arrow-down");
 
-        document.addEventListener('click', (event) => {
-            if (!button.contains(event.target) && !content.contains(event.target)) {
-                content.classList.remove('show');
-            }
-        });
-    }
+			if (content.classList.contains("show")) {
+				arrowImage.style.transform = "rotate(180deg)";
+			} else {
+				arrowImage.style.transform = "rotate(0deg)";
+			}
+		});
+
+		document.addEventListener("click", (event) => {
+			if (
+				!button.contains(event.target) &&
+				!content.contains(event.target)
+			) {
+				content.classList.remove("show");
+			}
+		});
+	}
 }
