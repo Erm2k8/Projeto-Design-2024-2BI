@@ -20,7 +20,7 @@ export default class LateralMenu {
 							currentPage === "index.html" ? "active" : ""
 						}">
                             <img src="${homeIcon}" alt="Home">
-                            <span class="nova-square-font home">Home</span>
+                            <span class="nova-square-font">Home</span>
                         </a>
                     </li>
                     <li class="thin-border-bottom">
@@ -28,7 +28,7 @@ export default class LateralMenu {
 							currentPage === "messages.html" ? "active" : ""
 						}">
                             <img src="${messagesIcon}" alt="Messages">
-                            <span class="nova-square-font messages">Mensagens</span>
+                            <span class="nova-square-font">Mensagens</span>
                         </a>
                     </li>
                     <li class="thin-border-bottom">
@@ -36,7 +36,7 @@ export default class LateralMenu {
 							currentPage === "profile.html" ? "active" : ""
 						}">
                             <img src="${profileIcon}" alt="Profile">
-                            <span class="nova-square-font profile">Perfil</span>
+                            <span class="nova-square-font">Perfil</span>
                         </a>
                     </li>
                     <li class="thin-border-bottom">
@@ -44,7 +44,7 @@ export default class LateralMenu {
 							currentPage === "post.html" ? "active" : ""
 						}">
                             <img src="${postIcon}" alt="Post">
-                            <span class="nova-square-font post">Postagem</span>
+                            <span class="nova-square-font">Postagem</span>
                         </a>
                     </li>
                     <li class="thin-border-bottom">
@@ -52,7 +52,7 @@ export default class LateralMenu {
 							currentPage === "settings.html" ? "active" : ""
 						}">
                             <img src="${settingsIcon}" alt="Settings">
-                            <span class="nova-square-font settings">Configurações</span>
+                            <span class="nova-square-font">Configurações</span>
                         </a>
                     </li>
                 </ul>
